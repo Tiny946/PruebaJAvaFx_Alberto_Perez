@@ -23,7 +23,9 @@ public class Main extends Application {
 	public Stage primaryStage;
 	/**
 	 * 
-	 * @param los parametros que recibe este metodo es el stage primaryStage
+	 * @throws los parametros que recibe este metodo es el stage primaryStage
+	 * @author Alberto Pérez
+	 * @version 1.0
 	 */
 	@Override
 	public void start(Stage primaryStage) {
@@ -31,8 +33,8 @@ public class Main extends Application {
 			
 			this.primaryStage = primaryStage;
 			this.primaryStage.setTitle("My GitHub Profile");
-			// Set the application icon.
-		    this.primaryStage.getIcons().add(new Image("file:/1480087661_github_social_media_online_logo.png"));
+			// ponemos un icono a la ventan
+		    this.primaryStage.getIcons().add(new Image("file:.\\1480087661_github_social_media_online_logo.png"));
 			this.primaryStage.setX(200);
 			this.primaryStage.setY(200);
 
@@ -43,20 +45,23 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-	}
-	
+	}	
+	/**
+	 * 
+	 * @throws cargamos y nos referimos a la primera pantalla del fxml
+	 */
 	public void initRootLayout() {
 		try {
 			// Load root layout from fxml file.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("vista/Principal.fxml"));
+			//nos referimos a la primera pantalla de fxml
+			loader.setLocation(Main.class.getResource("../vista/Profile.fxml"));
 			rootLayout = (AnchorPane) loader.load();
 
 			// Show the scene containing the root layout.
 			Scene scene = new Scene(rootLayout, 600, 400);
-			/*scene.getStylesheets().add(
-					getClass().getResource("application.css").toExternalForm());*/
-			//scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Shadows+Into+Light");
+			scene.getStylesheets().add(
+					getClass().getResource("mystylesheet.css").toExternalForm());
 
 			primaryStage.setScene(scene);
 			
@@ -65,7 +70,10 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+	/**
+	 * 
+	 * @throws lanzamos la app
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

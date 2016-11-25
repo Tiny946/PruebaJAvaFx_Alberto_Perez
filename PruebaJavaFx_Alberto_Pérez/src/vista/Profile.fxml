@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.ControlFx">
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <bottom>
@@ -34,7 +34,7 @@
                   </ImageView>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <children>
-                        <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="129.0" layoutY="25.0">
+                        <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="129.0" layoutY="25.0" onMouseClicked="#showSendProfile">
                            <image>
                               <Image url="@../../send.png" />
                            </image>
@@ -74,7 +74,7 @@
             </GridPane>
          </center>
          <top>
-            <AnchorPane prefHeight="94.0" prefWidth="600.0" style="-fx-background-color: #008080;" BorderPane.alignment="CENTER">
+            <AnchorPane onMouseClicked="#showSendProfile" prefHeight="94.0" prefWidth="600.0" style="-fx-background-color: #008080;" BorderPane.alignment="CENTER">
                <children>
                   <ImageView fitHeight="75.0" fitWidth="76.0" layoutX="14.0" layoutY="16.0">
                      <image>

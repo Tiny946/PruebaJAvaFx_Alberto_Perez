@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="350.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="350.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.ControlFx">
    <children>
       <BorderPane prefHeight="350.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -31,17 +32,6 @@
                         <InnerShadow />
                      </effect>
                   </ImageView>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #008080; -fx-border-color: white;" text="Exit" textFill="#f5f8f8" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
-                     <font>
-                        <Font name="System Bold Italic" size="11.0" />
-                     </font>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                     <tooltip>
-                        <Tooltip style="-fx-background-color: red;" />
-                     </tooltip>
-                  </Button>
                   <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                      <children>
                         <Label text="Name:">
@@ -54,17 +44,17 @@
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
-                        <Label text="Born:">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
                         <Label text="City:">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Label>
                         <Label text="Estudies:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Born:">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
@@ -81,6 +71,60 @@
                               </SepiaTone>
                            </effect>
                         </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jay">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="R.">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="California">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Interpretation">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <DatePicker prefHeight="25.0" prefWidth="83.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #008080; -fx-border-color: white;" text="Save" textFill="#f5f8f8">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold Italic" size="11.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip style="-fx-background-color: red;" />
+                           </tooltip>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#closeStage" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #008080; -fx-border-color: white;" text="Exit" textFill="#f5f8f8">
+                           <font>
+                              <Font name="System Bold Italic" size="11.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <tooltip>
+                              <Tooltip style="-fx-background-color: red;" />
+                           </tooltip>
+                        </Button>
                      </children>
                   </VBox>
                </children>
